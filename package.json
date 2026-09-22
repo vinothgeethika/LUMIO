@@ -9,7 +9,7 @@
     "serve:python": "python -m http.server 5500",
     "deploy": "npx wrangler pages deploy .",
     "deploy:prod": "npx wrangler pages deploy . --branch main",
-    "build": "echo LUMIO Studio Build Complete"
+    "build": "node -e \"const fs=require('fs'); if(fs.existsSync('ffmpeg/ffmpeg-core.wasm')) fs.unlinkSync('ffmpeg/ffmpeg-core.wasm'); console.log('LUMIO Cloudflare Build Ready (WASM parts active)');\""
   },
   "keywords": [
     "threejs",

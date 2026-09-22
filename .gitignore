@@ -21,3 +21,4 @@ __pycache__/
 test_*.py
 debug_*.py
 scratch/
+ffmpeg/ffmpeg-core.wasm
