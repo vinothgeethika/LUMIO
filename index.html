@@ -2,6 +2,344 @@
 <html lang="en">
 
 <head>
+    <style id="lumio-pro-workstation-styles">
+        /* ==========================================================================
+           LUMIO STUDIO — PRO WORKSTATION DESIGN SYSTEM v3.0
+           Architected & Engineered by Vinoth Geethika
+           ========================================================================== */
+        
+        :root {
+            --lumio-bg: #08080a;
+            --lumio-surface: #101014;
+            --lumio-surface-elevated: #16161c;
+            --lumio-surface-hover: #1c1c24;
+            --lumio-border: rgba(255, 255, 255, 0.08);
+            --lumio-border-hover: rgba(255, 255, 255, 0.18);
+            --lumio-border-active: rgba(255, 255, 255, 0.35);
+            --lumio-text-primary: #f4f4f6;
+            --lumio-text-secondary: #90909a;
+            --lumio-text-muted: #5a5a64;
+            --lumio-accent: #ffffff;
+            --lumio-accent-text: #08080a;
+            --lumio-radius: 8px;
+            --lumio-glow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+
+        /* 1. ROOT & BODY AESTHETICS */
+        html, body, #__next {
+            background-color: var(--lumio-bg) !important;
+            background-image: 
+                radial-gradient(1200px 700px at 50% -120px, rgba(255, 255, 255, 0.035) 0%, transparent 80%),
+                radial-gradient(900px 500px at 80% 100%, rgba(120, 140, 255, 0.015) 0%, transparent 70%),
+                linear-gradient(180deg, #08080a 0%, #0c0c10 100%) !important;
+            color: var(--lumio-text-primary) !important;
+            font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            letter-spacing: -0.015em !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. UNIVERSAL CARD & PANEL GEOMETRY (Sharp Architectural 8px) */
+        .hero-canvas,
+        .hero-video-container,
+        .feature-card,
+        .feature-card-img,
+        .feature-card-preview,
+        .why-choose-card,
+        .why-choose-image,
+        .step-box,
+        .mobile-step-box,
+        .mobile-feature-card,
+        .testimonial-card,
+        .mobile-testimonial-card,
+        .credit-package-landing,
+        .landing-customizer-section,
+        .landing-dragdrop-zone,
+        .landing-dragdrop-preview,
+        .canvas-clip,
+        .auth-box,
+        .verification-modal,
+        .settings-card,
+        .obpw-modal,
+        .obpw-app-modal,
+        .obpw-app-card,
+        .export-modal,
+        .cookie-consent-modal,
+        .credit-purchase-modal,
+        .discord-toast-card,
+        .blog-card,
+        .lumio-player-host,
+        [class*="-card"],
+        [class*="-modal"],
+        div[style*="border-radius: 10px"],
+        div[style*="border-radius: 12px"],
+        div[style*="border-radius: 14px"],
+        div[style*="border-radius: 16px"],
+        div[style*="border-radius: 18px"],
+        div[style*="border-radius: 20px"],
+        div[style*="border-radius: 24px"],
+        div[style*="border-radius: 32px"] {
+            border-radius: var(--lumio-radius) !important;
+        }
+
+        /* 3. SURFACE ELEVATION & SHADOWS */
+        .feature-card,
+        .why-choose-card,
+        .step-box,
+        .testimonial-card,
+        .credit-package-landing,
+        .blog-card,
+        .obpw-app-card,
+        .settings-card,
+        .auth-box,
+        [data-testid*="premade-template-"] {
+            background: var(--lumio-surface) !important;
+            border: 1px solid var(--lumio-border) !important;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6) !important;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        .feature-card:hover,
+        .why-choose-card:hover,
+        .step-box:hover,
+        .testimonial-card:hover,
+        .credit-package-landing:hover,
+        [data-testid*="premade-template-"]:hover {
+            background: var(--lumio-surface-elevated) !important;
+            border-color: var(--lumio-border-hover) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8) !important;
+            transform: translateY(-2px);
+        }
+
+        /* 4. HIGH-CONTRAST MONOCHROME CONTROLS & BUTTONS */
+        .cta-primary,
+        .header-dashboard,
+        .free-trial-btn,
+        .purchase-button-landing,
+        button[data-testid="export-button"] {
+            background: #ffffff !important;
+            color: #08080a !important;
+            font-weight: 600 !important;
+            border: 1px solid #ffffff !important;
+            border-radius: var(--lumio-radius) !important;
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.12) !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .cta-primary:hover,
+        .header-dashboard:hover,
+        .free-trial-btn:hover,
+        .purchase-button-landing:hover,
+        button[data-testid="export-button"]:hover {
+            background: #e4e4e7 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 0 24px rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .cta-secondary,
+        .change-phone-btn,
+        .obpw-app-btn {
+            background: rgba(255, 255, 255, 0.04) !important;
+            color: var(--lumio-text-primary) !important;
+            border: 1px solid var(--lumio-border) !important;
+            border-radius: var(--lumio-radius) !important;
+            backdrop-filter: blur(8px);
+            transition: all 0.2s ease !important;
+        }
+
+        .cta-secondary:hover,
+        .change-phone-btn:hover,
+        .obpw-app-btn:hover {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: var(--lumio-border-hover) !important;
+        }
+
+        /* 5. DOCKABLE FLOATING STUDIO TOOLBARS */
+        header, nav, .studio-toolbar, [class*="toolbar"], [class*="topbar"] {
+            backdrop-filter: blur(20px) !important;
+            background: rgba(10, 10, 14, 0.8) !important;
+            border-bottom: 1px solid var(--lumio-border) !important;
+        }
+
+        /* 6. HARDWARE RENDER TIMELINE & SCRUBBER */
+        .timeline-container, [class*="timeline"], [class*="track-container"] {
+            background: #0c0c10 !important;
+            border-top: 1px solid var(--lumio-border) !important;
+        }
+
+        /* 7. CUSTOM ULTRA-SLEEK SCROLLBARS */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08080a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222228;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333340;
+        }
+
+        /* 8. FOUNDER & LIVE ENGINE STATUS BADGE */
+        .lumio-nav-brand-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lumio-version-badge {
+            font-size: 10px;
+            font-weight: 700;
+            color: #d4d4d8;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 4px;
+            padding: 2px 6px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .lumio-founder-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #a1a1aa;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 6px;
+            padding: 3px 9px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .lumio-founder-pill:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .lumio-status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 8px #10b981;
+            display: inline-block;
+        }
+
+        .lumio-workstation-footer {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: #71717a;
+            padding: 32px 0 20px;
+            letter-spacing: 0.02em;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 48px;
+            width: 100%;
+        }
+
+        .lumio-workstation-footer strong {
+            color: #f4f4f6;
+            font-weight: 600;
+        }
+    </style>
+    <script id="lumio-pro-workstation-script">
+        (function() {
+            var PAGE_TITLE = "LUMIO Studio — Spatial 3D Mockup & Motion Timeline Engine | Engineered by Vinoth Geethika";
+
+            function enforceBranding() {
+                if (document.title !== PAGE_TITLE) {
+                    document.title = PAGE_TITLE;
+                }
+
+                // 1. Brand Logo & Founder Badge Injection
+                var logoNodes = document.querySelectorAll('header a, nav a, .header-logo, a[href="/"], a[href="/app"]');
+                for (var i = 0; i < logoNodes.length; i++) {
+                    var el = logoNodes[i];
+                    if (el.textContent && el.textContent.includes('LUMIO') && !el.querySelector('.lumio-founder-pill')) {
+                        // Check if badge already appended
+                        if (!el.querySelector('.lumio-version-badge')) {
+                            var vBadge = document.createElement('span');
+                            vBadge.className = 'lumio-version-badge';
+                            vBadge.innerText = 'v3.0 PRO';
+                            vBadge.style.marginLeft = '8px';
+                            el.appendChild(vBadge);
+                        }
+
+                        var founderPill = document.createElement('span');
+                        founderPill.className = 'lumio-founder-pill';
+                        founderPill.innerHTML = '<span class="lumio-status-dot"></span>by Vinoth Geethika';
+                        founderPill.title = 'LUMIO Studio Architect: Vinoth Geethika';
+                        founderPill.style.marginLeft = '10px';
+                        
+                        if (el.parentElement) {
+                            el.parentElement.style.display = 'flex';
+                            el.parentElement.style.alignItems = 'center';
+                        }
+                        el.appendChild(founderPill);
+                        break;
+                    }
+                }
+
+                // 2. Custom Pro Footer Injection
+                if (!document.getElementById('lumio-pro-footer-el')) {
+                    var footer = document.querySelector('footer');
+                    var credit = document.createElement('div');
+                    credit.id = 'lumio-pro-footer-el';
+                    credit.className = 'lumio-workstation-footer';
+                    credit.innerHTML = 'LUMIO Studio v3.0 • Hardware-Accelerated 3D Motion & Video Suite • Engineered & Architected by <strong>Vinoth Geethika</strong>';
+                    
+                    if (footer) {
+                        footer.appendChild(credit);
+                    } else {
+                        var host = document.querySelector('.main-content, main, #__next');
+                        if (host) host.appendChild(credit);
+                    }
+                }
+
+                // 3. Dynamic Text Refinement for Modals and Headers
+                var headings = document.querySelectorAll('h1, h2, h3, h4, span, button');
+                for (var j = 0; j < headings.length; j++) {
+                    var node = headings[j];
+                    if (node.childNodes.length === 1 && node.childNodes[0].nodeType === 3) {
+                        var txt = node.textContent.trim();
+                        if (txt === 'PROMO APP MAKER' || txt === 'Promo Editor') {
+                            node.textContent = 'LUMIO Motion Timeline';
+                        } else if (txt === 'New: Promo video mode') {
+                            node.textContent = 'LUMIO Motion Timeline';
+                        } else if (txt === 'Device Settings') {
+                            node.textContent = 'Chassis & PBR Lab';
+                        } else if (txt === 'Export Queue') {
+                            node.textContent = 'GPU Render Engine';
+                        } else if (txt === 'Choose an Animation') {
+                            node.textContent = 'Cinematic Camera Trajectories';
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', enforceBranding);
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                enforceBranding();
+            }
+
+            var obs = new MutationObserver(function() {
+                enforceBranding();
+            });
+            obs.observe(document.documentElement, { childList: true, subtree: true });
+        })();
+    </script>
+
     <!-- Primary SEO Meta Tags -->
     <title>LUMIO — 3D Device Mockup &amp; Video Promo Studio | Developed by Vinoth Geethika</title>
     <meta name="title" content="LUMIO — 3D Device Mockup &amp; Video Promo Studio | Developed by Vinoth Geethika" />
@@ -63,253 +401,8 @@
       }
     }
     </script>
-    <style id="lumio-concept2-styles">
-        /* LUMIO Concept 2: Sleek Monochrome Studio & Reduced Card Radii */
-        :root {
-            --lumio-bg: #09090b;
-            --lumio-surface: #111114;
-            --lumio-border: rgba(255, 255, 255, 0.08);
-            --lumio-border-hover: rgba(255, 255, 255, 0.18);
-            --lumio-card-radius: 8px;
-        }
-
-        html, body, #__next {
-            background-color: #09090b !important;
-            color: #f4f4f5 !important;
-        }
-
-        /* 1. UNIVERSAL CARD BORDER-RADIUS REDUCTION (Sharp, Architectural 8px) */
-        .hero-canvas,
-        .hero-video-container,
-        .feature-card,
-        .feature-card-img,
-        .feature-card-preview,
-        .why-choose-card,
-        .why-choose-image,
-        .step-box,
-        .mobile-step-box,
-        .mobile-feature-card,
-        .testimonial-card,
-        .mobile-testimonial-card,
-        .credit-package-landing,
-        .landing-customizer-section,
-        .landing-dragdrop-zone,
-        .landing-dragdrop-preview,
-        .canvas-clip,
-        .auth-box,
-        .verification-modal,
-        .settings-card,
-        .obpw-modal,
-        .obpw-app-modal,
-        .obpw-app-card,
-        .export-modal,
-        .cookie-consent-modal,
-        .credit-purchase-modal,
-        .discord-toast-card,
-        .blog-card,
-        .promogen-player-host,
-        [class*="-card"],
-        [class*="-modal"],
-        div[style*="border-radius: 12px"],
-        div[style*="border-radius: 14px"],
-        div[style*="border-radius: 16px"],
-        div[style*="border-radius: 18px"],
-        div[style*="border-radius: 20px"],
-        div[style*="border-radius: 24px"],
-        div[style*="border-radius: 32px"] {
-            border-radius: 8px !important;
-        }
-
-        /* Buttons & Controls: Clean 8px Radius */
-        .cta-primary,
-        .cta-secondary,
-        .free-trial-btn,
-        .purchase-button-landing,
-        .change-phone-btn,
-        .obpw-app-btn,
-        .examples-cta-button,
-        button[style*="border-radius: 10px"],
-        button[style*="border-radius: 12px"],
-        button[style*="border-radius: 16px"] {
-            border-radius: 8px !important;
-        }
-
-        /* 2. CONCEPT 2 SURFACE & CARD ELEVATION */
-        .feature-card,
-        .why-choose-card,
-        .step-box,
-        .testimonial-card,
-        .credit-package-landing,
-        .blog-card,
-        .obpw-app-card,
-        .settings-card,
-        .auth-box {
-            background: #111114 !important;
-            border: 1px solid rgba(255, 255, 255, 0.08) !important;
-            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5) !important;
-            transition: border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        }
-
-        .feature-card:hover,
-        .why-choose-card:hover,
-        .step-box:hover,
-        .testimonial-card:hover,
-        .credit-package-landing:hover {
-            border-color: rgba(255, 255, 255, 0.2) !important;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7) !important;
-        }
-
-        /* 3. HIGH-CONTRAST MONOCHROME ACTION BUTTONS */
-        .cta-primary,
-        .header-dashboard,
-        .free-trial-btn,
-        .purchase-button-landing {
-            background: #ffffff !important;
-            color: #09090b !important;
-            font-weight: 600 !important;
-            border: 1px solid #ffffff !important;
-            box-shadow: 0 0 16px rgba(255, 255, 255, 0.12) !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .cta-primary:hover,
-        .header-dashboard:hover,
-        .free-trial-btn:hover,
-        .purchase-button-landing:hover {
-            background: #e4e4e7 !important;
-            transform: translateY(-1px);
-            box-shadow: 0 0 24px rgba(255, 255, 255, 0.22) !important;
-        }
-
-        .cta-secondary {
-            background: rgba(255, 255, 255, 0.04) !important;
-            color: #f4f4f5 !important;
-            border: 1px solid rgba(255, 255, 255, 0.12) !important;
-            backdrop-filter: blur(8px);
-        }
-
-        .cta-secondary:hover {
-            background: rgba(255, 255, 255, 0.08) !important;
-            border-color: rgba(255, 255, 255, 0.22) !important;
-        }
-
-        /* 4. DEVELOPER ATTRIBUTION BADGE (Vinoth Geethika) */
-        .lumio-dev-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            font-weight: 500;
-            color: #a1a1aa;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            border-radius: 6px;
-            padding: 3px 8px;
-            margin-left: 8px;
-            transition: all 0.2s ease;
-            letter-spacing: 0.02em;
-            text-decoration: none;
-            white-space: nowrap;
-            vertical-align: middle;
-            line-height: 1.2;
-        }
-
-        .lumio-dev-badge:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.09);
-            border-color: rgba(255, 255, 255, 0.25);
-        }
-
-        .lumio-dev-dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: #10b981;
-            box-shadow: 0 0 6px #10b981;
-            display: inline-block;
-        }
-
-        .lumio-footer-credit {
-            display: block;
-            text-align: center;
-            font-size: 12px;
-            color: #71717a;
-            padding: 24px 0 16px;
-            letter-spacing: 0.02em;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            margin-top: 48px;
-            width: 100%;
-        }
-
-        .lumio-footer-credit strong {
-            color: #f4f4f5;
-            font-weight: 600;
-        }
-    </style>
-    <script id="lumio-attribution-script">
-        (function() {
-            var PAGE_TITLE = "LUMIO — 3D Device Mockup & Video Promo Studio | Developed by Vinoth Geethika";
-            
-            function enforceTitle() {
-                if (document.title !== PAGE_TITLE) {
-                    document.title = PAGE_TITLE;
-                }
-            }
-
-            function injectAttribution() {
-                enforceTitle();
-
-                // 1. Inject Developer Badge next to LUMIO Header Brand
-                var logoNodes = document.querySelectorAll('header a, nav a, .header-logo, a[href="/"], a[href="/app"]');
-                for (var i = 0; i < logoNodes.length; i++) {
-                    var el = logoNodes[i];
-                    if (el.textContent && el.textContent.includes('LUMIO') && !el.querySelector('.lumio-dev-badge') && !el.nextElementSibling?.classList?.contains('lumio-dev-badge')) {
-                        var badge = document.createElement('span');
-                        badge.className = 'lumio-dev-badge';
-                        badge.innerHTML = '<span class="lumio-dev-dot"></span>by Vinoth Geethika';
-                        badge.title = 'Developed & Engineered by Vinoth Geethika';
-                        if (el.parentElement) {
-                            el.parentElement.style.display = el.parentElement.style.display || 'flex';
-                            el.parentElement.style.alignItems = 'center';
-                        }
-                        el.appendChild(badge);
-                        break;
-                    }
-                }
-
-                // 2. Inject sleek Footer Credit if not already present
-                if (!document.getElementById('lumio-footer-credit-el')) {
-                    var footer = document.querySelector('footer');
-                    var credit = document.createElement('div');
-                    credit.id = 'lumio-footer-credit-el';
-                    credit.className = 'lumio-footer-credit';
-                    credit.innerHTML = 'LUMIO Studio • Designed & Engineered with precision by <strong>Vinoth Geethika</strong>';
-                    
-                    if (footer) {
-                        footer.appendChild(credit);
-                    } else {
-                        var appRoot = document.getElementById('__next') || document.body;
-                        if (appRoot && appRoot.lastElementChild && !document.getElementById('lumio-footer-credit-el')) {
-                            // Only append if at page bottom
-                            var host = document.querySelector('.main-content, main, #__next');
-                            if (host) host.appendChild(credit);
-                        }
-                    }
-                }
-            }
-
-            document.addEventListener('DOMContentLoaded', injectAttribution);
-            if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                injectAttribution();
-            }
-
-            // Observe DOM mutations to persist badge across client-side router navigation
-            var observer = new MutationObserver(function() {
-                injectAttribution();
-            });
-            observer.observe(document.documentElement, { childList: true, subtree: true });
-        })();
-    </script>
+    
+    
 
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -350,7 +443,7 @@
                     if (!res.ok && url.includes('.glb')) {
                         var filename = url.split('/').pop().split('?')[0];
                         var sub = url.includes('ComputerAnimations') ? 'ComputerAnimations/' : (url.includes('phones') ? 'phones/' : (url.includes('computers') ? 'computers/' : ''));
-                        var fallbackUrl = 'https://www.promogen.app/' + sub + filename;
+                        var fallbackUrl = '/' + sub + filename;
                         return _origFetch(fallbackUrl, init);
                     }
                     return res;
@@ -358,7 +451,7 @@
                     if (url.includes('.glb')) {
                         var filename = url.split('/').pop().split('?')[0];
                         var sub = url.includes('ComputerAnimations') ? 'ComputerAnimations/' : (url.includes('phones') ? 'phones/' : (url.includes('computers') ? 'computers/' : ''));
-                        return _origFetch('https://www.promogen.app/' + sub + filename, init);
+                        return _origFetch('/' + sub + filename, init);
                     }
                     throw err;
                 }

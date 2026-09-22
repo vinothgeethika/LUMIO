@@ -15,8 +15,8 @@ code {
     min-height: 100vh
 }
 
-.promogen-player-host :is(.remotion-player, .__remotion-player, [data-remotion-player]),
-.promogen-player-host :is(.remotion-player, .__remotion-player, [data-remotion-player]) * {
+.lumio-player-host :is(.remotion-player, .__remotion-player, [data-remotion-player]),
+.lumio-player-host :is(.remotion-player, .__remotion-player, [data-remotion-player]) * {
     max-width: none !important;
     max-height: none !important
 }

@@ -482,7 +482,7 @@
                 R = r(92),
                 P = r(173),
                 T = r(1873);
-            let z = "promogen_promo_video_coachmark_dismissed",
+            let z = "lumio_welcome_dismissed",
                 N = () => (0, o.jsxs)("svg", {
                     width: "18",
                     height: "18",
@@ -733,7 +733,7 @@
                                         value: !1,
                                         hint: "One scene at a time — pick a device, add your screen, export."
                                     }, {
-                                        label: "Promo Editor",
+                                        label: "LUMIO Motion Timeline",
                                         value: !0,
                                         hint: "Combine clips, text, and motion into one exportable promo video."
                                     }].map(e => {
@@ -834,7 +834,7 @@
                                                         color: d.text,
                                                         marginBottom: 12
                                                     },
-                                                    children: "New: Promo video mode"
+                                                    children: "LUMIO Motion Timeline"
                                                 }), (0, o.jsx)("p", {
                                                     style: {
                                                         margin: "0 0 18px",
@@ -1769,7 +1769,7 @@
                                     borderTopColor: t.accent
                                 }
                             }), (0, o.jsx)("h3", {
-                                children: "Exporting Animation"
+                                children: "Hardware Rendering Video"
                             }), (0, o.jsx)("div", {
                                 className: "progress-bar-container",
                                 style: {
@@ -2047,7 +2047,7 @@
                                         fontSize: "24px",
                                         fontWeight: "600"
                                     },
-                                    children: "Export Summary"
+                                    children: "Render Summary"
                                 })]
                             }), (0, o.jsx)("button", {
                                 onClick: f,
@@ -2551,7 +2551,7 @@
                                 fontSize: 13,
                                 fontWeight: 700
                             },
-                            children: "Export Queue"
+                            children: "GPU Render Engine"
                         }), (0, o.jsxs)("div", {
                             style: {
                                 display: "flex",
@@ -2943,7 +2943,7 @@
                                 fontSize: 13,
                                 fontWeight: 700
                             },
-                            children: "Export Queue"
+                            children: "GPU Render Engine"
                         }), (0, o.jsx)("button", {
                             type: "button",
                             onClick: () => c(!0),
@@ -3685,7 +3685,7 @@
                             }), (0, o.jsx)("button", {
                                 onClick: () => {
                                     let e = encodeURIComponent("LUMIO Social Share - Free Credits Request"),
-                                        t = encodeURIComponent(`I've shared my mockup on social media and mentioned promogen.app!
+                                        t = encodeURIComponent(`I've shared my mockup on social media and mentioned lumio.studio!
 
 Here's the link to my post:
 [Your social media post link here]
@@ -3817,7 +3817,7 @@ My account email: ${d?.email||"N/A"}`),
                                 window.localStorage.setItem(`onboardingPreferredDevice_${a}`, e || "")
                             } catch {}
                             try {
-                                window.dispatchEvent(new CustomEvent("promogen:onboardingPreferredDevice", {
+                                window.dispatchEvent(new CustomEvent("lumio:devicePreference", {
                                     detail: {
                                         userId: a,
                                         preferredDevice: e || null
@@ -3933,7 +3933,7 @@ My account email: ${d?.email||"N/A"}`),
                                 fontWeight: 600,
                                 color: i.text
                             },
-                            children: 0 === s ? "What brings you here?" : 1 === s ? "What do you use LUMIO for?" : 2 === s ? "How did you hear about us?" : "What are you making videos for?"
+                            children: 0 === s ? "What are you creating today?" : 1 === s ? "What do you use LUMIO for?" : 2 === s ? "How did you hear about us?" : "What are you making videos for?"
                         }), 0 === s && (0, o.jsxs)(o.Fragment, {
                             children: [(0, o.jsx)("p", {
                                 style: {
@@ -3986,7 +3986,7 @@ My account email: ${d?.email||"N/A"}`),
                                     fontSize: "14px",
                                     color: i.textSecondary
                                 },
-                                children: "Pick all that apply"
+                                children: "Select your preferred workflow"
                             }), (0, o.jsx)("div", {
                                 style: {
                                     display: "flex",
@@ -4599,7 +4599,7 @@ My account email: ${d?.email||"N/A"}`),
                                     fontWeight: "900",
                                     color: t.text
                                 },
-                                children: "PROMO APP MAKER"
+                                children: "LUMIO MOTION TIMELINE"
                             }), (0, o.jsx)("div", {
                                 style: {
                                     fontSize: "48px",
@@ -4764,7 +4764,7 @@ My account email: ${d?.email||"N/A"}`),
                                         textTransform: "uppercase",
                                         opacity: .95
                                     },
-                                    children: "Choose an Animation"
+                                    children: "Cinematic Camera Trajectories"
                                 }), C && (0, o.jsx)("div", {
                                     style: {
                                         fontSize: "11px",
@@ -5632,7 +5632,7 @@ My account email: ${d?.email||"N/A"}`),
                                         color: t.textSecondary,
                                         opacity: .95
                                     },
-                                    children: "Device Settings"
+                                    children: "Chassis & PBR Lab"
                                 }), (0, o.jsxs)("div", {
                                     style: {
                                         flex: 1,
@@ -6837,7 +6837,7 @@ My account email: ${d?.email||"N/A"}`),
                         let t = e ?.detail || {};
                         tI && t.userId === tI.uid && tN(t.preferredDevice)
                     };
-                    return window.addEventListener("promogen:onboardingPreferredDevice", e), () => window.removeEventListener("promogen:onboardingPreferredDevice", e)
+                    return window.addEventListener("lumio:devicePreference", e), () => window.removeEventListener("lumio:devicePreference", e)
                 }, [tI, tN]);
                 let {
                     showExportSummary: t$,
@@ -7579,7 +7579,7 @@ My account email: ${d?.email||"N/A"}`),
                                                     justifyContent: "center",
                                                     color: tE.textSecondary
                                                 },
-                                                children: "Loading Promo Editor…"
+                                                children: "Initializing LUMIO Engine...…"
                                             }),
                                             children: (0, o.jsx)("div", {
                                                 style: {
@@ -8602,7 +8602,7 @@ My account email: ${d?.email||"N/A"}`),
                                 },
                                 children: [(0, o.jsx)("span", {
                                     style: q,
-                                    children: "Saved Colors"
+                                    children: "PBR Color Presets"
                                 }), (0, o.jsx)("div", {
                                     style: {
                                         display: "flex",
@@ -9383,7 +9383,7 @@ My account email: ${d?.email||"N/A"}`),
                                     }
                                 }), (0, o.jsx)("span", {
                                     className: "material-label",
-                                    children: "Space Gray"
+                                    children: "Obsidian Titanium"
                                 })]
                             }), (0, o.jsxs)("div", {
                                 className: `material-option ${"bright"===E?"selected":""}`,
@@ -9397,7 +9397,7 @@ My account email: ${d?.email||"N/A"}`),
                                     }
                                 }), (0, o.jsx)("span", {
                                     className: "material-label",
-                                    children: "Silver"
+                                    children: "Natural Titanium"
                                 })]
                             }), (0, o.jsxs)("div", {
                                 className: `material-option ${"custom"===E?"selected":""}`,
@@ -10602,7 +10602,7 @@ My account email: ${d?.email||"N/A"}`),
                                     fontWeight: "500",
                                     textAlign: "center"
                                 },
-                                children: "Saved Colors"
+                                children: "PBR Color Presets"
                             }), (0, o.jsx)("div", {
                                 style: {
                                     display: "flex",
@@ -10793,7 +10793,7 @@ My account email: ${d?.email||"N/A"}`),
                                     }
                                 }), (0, o.jsx)("span", {
                                     className: "material-label",
-                                    children: "Space Gray"
+                                    children: "Obsidian Titanium"
                                 })]
                             }), (0, o.jsxs)("div", {
                                 className: `material-option ${"bright"===I?"selected":""}`,
@@ -10805,7 +10805,7 @@ My account email: ${d?.email||"N/A"}`),
                                     }
                                 }), (0, o.jsx)("span", {
                                     className: "material-label",
-                                    children: "Silver"
+                                    children: "Natural Titanium"
                                 })]
                             }), (0, o.jsxs)("div", {
                                 className: `material-option ${"custom"===I?"selected":""}`,
@@ -10870,7 +10870,7 @@ My account email: ${d?.email||"N/A"}`),
                             onClick: () => T(!P),
                             children: [(0, o.jsx)("div", {
                                 className: "settings-title",
-                                children: "Device Settings"
+                                children: "Chassis & PBR Lab"
                             }), (0, o.jsx)("div", {
                                 className: `toggle-icon ${P?"collapsed":""}`,
                                 children: (0, o.jsx)("svg", {
@@ -12191,7 +12191,7 @@ My account email: ${d?.email||"N/A"}`),
                         t(Error("IndexedDB unavailable"));
                         return
                     }
-                    let r = indexedDB.open("promogen_studio_autosave", 1);
+                    let r = indexedDB.open("lumio_studio_autosave", 1);
                     r.onupgradeneeded = () => {
                         let e = r.result;
                         e.objectStoreNames.contains(o) || e.createObjectStore(o)

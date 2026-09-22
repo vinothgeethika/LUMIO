@@ -1,6 +1,6 @@
-# 🚀 Cloudflare Pages Deployment Guide for PromoGen Studio
+# 🚀 Cloudflare Pages Deployment Guide for LUMIO Studio Studio
 
-PromoGen Studio is fully optimized and configured for seamless deployment on **Cloudflare Pages**.
+LUMIO Studio Studio is fully optimized and configured for seamless deployment on **Cloudflare Pages**.
 
 ---
 
@@ -10,7 +10,7 @@ You can deploy the entire project to Cloudflare Pages directly from your termina
 
 ### Step 1: Open Terminal in Project Root
 ```bash
-cd "e:\Promogen - Unlocked"
+cd "e:\lumio - Unlocked"
 ```
 
 ### Step 2: Run Deploy Command
@@ -22,11 +22,11 @@ npx wrangler pages deploy .
 
 *Note: On your first run, Wrangler will open your browser to log in to your free Cloudflare account.*
 1. When asked `Create a new project?`, select **Yes**.
-2. Project name: `promogen-studio` (or your chosen name).
+2. Project name: `lumio-studio` (or your chosen name).
 3. Production branch: `main`.
 
 Once uploaded, Wrangler will output your live URL:
-👉 `https://promogen-studio.pages.dev`
+👉 `https://lumio-studio.pages.dev`
 
 ---
 

@@ -2005,7 +2005,7 @@
                             })
                         }, [m]), (0, r.jsx)(h.Provider, {
                             value: {
-                                currentUser: n || { uid: "local_user", email: "pro@promogen.app", displayName: "Pro User", emailVerified: !0, getIdToken: async function() { return "mock_token"; } },
+                                currentUser: n || { uid: "local_user", email: "pro@lumio.studio", displayName: "Pro User", emailVerified: !0, getIdToken: async function() { return "mock_token"; } },
                                 loading: !1,
                                 glbCookieReady: !0,
                                 signup: y,
@@ -2395,9 +2395,9 @@ ${this.customData.serverResponse}` : this.message = this._baseMessage
                     let k = null,
                         R = (k = (0, a.C6)().length ? (0, a.C6)()[0] : (0, a.ZF)({
                             apiKey: "AIzaSyBWfQanxUMo1Hq6yGwQrb5ABRktB_hv4DA",
-                            authDomain: "promogen-6a08a.firebaseapp.com",
-                            projectId: "promogen-6a08a",
-                            storageBucket: "promogen-6a08a.firebasestorage.app",
+                            authDomain: "lumio-6a08a.firebaseapp.com",
+                            projectId: "lumio-6a08a",
+                            storageBucket: "lumio-6a08a.firebasestorage.app",
                             messagingSenderId: "765094714182",
                             appId: "1:765094714182:web:4865ca20bd9bf4ec332347"
                         })) ? (0, l.ad)(k) : null;
@@ -2702,7 +2702,7 @@ ${this.customData.serverResponse}` : this.message = this._baseMessage
                     "use strict";
 
                     function r() {
-                        let e = "assets.promogen.app";
+                        let e = "assets.lumio.studio";
                         if (!e || "undefined" == typeof self || !self.location) return !1;
                         let t = e.split("."),
                             n = t.length > 1 ? t.slice(1).join(".") : e,
@@ -2715,7 +2715,7 @@ ${this.customData.serverResponse}` : this.message = this._baseMessage
                     function i(e) {
                         let {
                             forceLocal: t = !1
-                        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = String(e || "").replace(/^\/+/, ""), i = "assets.promogen.app";
+                        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = String(e || "").replace(/^\/+/, ""), i = "assets.lumio.studio";
                         if (n.startsWith("Vertical_Animation_")) n = `animations/vertical/${n}`;
                         else if (n.startsWith("Animation_")) n = `animations/horizontal/${n}`;
                         else if (n.startsWith("ComputerAnimations/")) n = `animations/computer/${n.replace("ComputerAnimations/", "")}`;
