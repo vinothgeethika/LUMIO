@@ -1,0 +1,27 @@
+{
+  "name": "lumio-studio",
+  "version": "2.4.0",
+  "description": "LUMIO — 3D Device Mockup & Video Promo Studio. Engineered by Vinoth Geethika.",
+  "main": "app.html",
+  "scripts": {
+    "dev": "npx -y serve -l 5500 .",
+    "start": "npx -y serve -l 5500 .",
+    "serve:python": "python -m http.server 5500",
+    "deploy": "npx wrangler pages deploy .",
+    "deploy:prod": "npx wrangler pages deploy . --branch main"
+  },
+  "keywords": [
+    "threejs",
+    "webgl",
+    "webcodecs",
+    "mockups",
+    "video-editor",
+    "ffmpeg-wasm",
+    "promo-generator"
+  ],
+  "author": "Vinoth Geethika",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

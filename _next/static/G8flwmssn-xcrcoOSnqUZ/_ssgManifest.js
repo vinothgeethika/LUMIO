@@ -1,0 +1,2 @@
+self.__SSG_MANIFEST = new Set(["\u002F", "\u002Fblog", "\u002Fblog\u002F[slug]", "\u002Fcookie-policy", "\u002Flicenses", "\u002Fprivacy", "\u002Fterms-of-service"]);
+self.__SSG_MANIFEST_CB && self.__SSG_MANIFEST_CB()

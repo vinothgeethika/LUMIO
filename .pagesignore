@@ -1,0 +1,6 @@
+ffmpeg/ffmpeg-core.wasm
+.git
+.gitignore
+.pagesignore
+node_modules
+*.bak

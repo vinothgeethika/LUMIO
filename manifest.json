@@ -1,0 +1,26 @@
+{
+  "short_name": "LUMIO",
+  "name": "LUMIO \u2014 3D Device Mockup & Video Promo Studio",
+  "description": "Create cinematic 3D device mockups and multi-clip promo videos with hardware-accelerated local rendering. Developed by Vinoth Geethika.",
+  "icons": [
+    {
+      "src": "/fav.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/fav.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/fav.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#09090b",
+  "background_color": "#09090b"
+}
