@@ -1,14 +1,15 @@
 {
   "name": "lumio-studio",
   "version": "2.4.0",
-  "description": "LUMIO — 3D Device Mockup & Video Promo Studio. Engineered by Vinoth Geethika.",
+  "description": "LUMIO Studio - Pro 3D Device Mockup & Motion Video Workstation. Engineered by Vinoth Geethika.",
   "main": "app.html",
   "scripts": {
     "dev": "npx -y serve -l 5500 .",
     "start": "npx -y serve -l 5500 .",
     "serve:python": "python -m http.server 5500",
     "deploy": "npx wrangler pages deploy .",
-    "deploy:prod": "npx wrangler pages deploy . --branch main"
+    "deploy:prod": "npx wrangler pages deploy . --branch main",
+    "build": "echo LUMIO Studio Build Complete"
   },
   "keywords": [
     "threejs",
